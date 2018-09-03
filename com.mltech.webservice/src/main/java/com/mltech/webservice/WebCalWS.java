@@ -28,6 +28,8 @@ public class WebCalWS {
 		int num2 = Integer.parseInt(varY);
 		return String.valueOf(num1+num2);
 	}
+	
+	
 	@GET
 	@Path("/minus/{varX}/{varY}")
 	@Produces(MediaType.TEXT_PLAIN)
