@@ -29,13 +29,13 @@ public class WebCalWS {
 		return String.valueOf(num1+num2);
 	}
 	@GET
-	@Path("/minus")
+	@Path("/minus/{varX}/{varY}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String minus(@QueryParam("num1") String varX,
-		    @QueryParam("num2") String varY) {
+	public String minus(@PathParam("varX") String varX,
+		    @PathParam("varY") String varY) {
 		int num1 = Integer.parseInt(varX);
 		int num2 = Integer.parseInt(varY);
-		return String.valueOf(num1+num2);
+		return String.valueOf(num1-num2);
 	}
 
 
