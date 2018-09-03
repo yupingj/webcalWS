@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -27,5 +28,15 @@ public class WebCalWS {
 		int num2 = Integer.parseInt(varY);
 		return String.valueOf(num1+num2);
 	}
+	@GET
+	@Path("/minus")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String minus(@QueryParam("num1") String varX,
+		    @QueryParam("num2") String varY) {
+		int num1 = Integer.parseInt(varX);
+		int num2 = Integer.parseInt(varY);
+		return String.valueOf(num1+num2);
+	}
+
 
 }
