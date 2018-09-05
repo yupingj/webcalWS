@@ -44,8 +44,12 @@
 			<artifactId>jersey-bundle</artifactId>
 			<version>1.18</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/asm/asm-all -->
-			</dependencies>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<finalName>com.mltech.webservice</finalName>
 	</build>
