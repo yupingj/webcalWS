@@ -18,10 +18,7 @@ public class CustomerWS {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Customer findCustomer(@PathParam("id") String myid) {
 		
-		Address myaddress = new Address("Hidden Creek", "39129", "Westland", "48185", "MI");
-		
-		
-		
+		Address myaddress = new Address("Hidden Creek", "39129", "Westland", "48185", "MI");		
 		Customer myct= new Customer(888, "Yuping", "Jiang", new Date(), myaddress);
 		
 		return myct;
