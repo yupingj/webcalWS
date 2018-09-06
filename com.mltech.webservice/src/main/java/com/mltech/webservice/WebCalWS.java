@@ -30,6 +30,16 @@ public class WebCalWS {
 	}	
 	
 	@GET
+	@Path("/add")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String addByQueryParm(@QueryParam("num1") String varX,
+			@QueryParam("num2") String varY) {
+		int num1 = Integer.parseInt(varX);
+		int num2 = Integer.parseInt(varY);
+		return String.valueOf(num1+num2);
+	}	
+	
+	@GET
 	@Path("/minus/{varX}/{varY}")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String minus(@PathParam("varX") String varX,

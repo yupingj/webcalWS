@@ -2,6 +2,9 @@ package com.mltech.entity;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Customer {
 	private long id;
 	private String firstName;
